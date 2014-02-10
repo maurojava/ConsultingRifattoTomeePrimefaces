@@ -1,0 +1,22 @@
+FOr work with it you have:
+
+1)create a db derby called consultDB
+2) add tom tomee.xml the following declaration of datasource.
+3) add to tomee/lib the drivers for derby client
+4) add to web-inf/lib the primefaces 4.0 library
+
+<Resource id="jdbc-myconsultingManaged" type="javax.sql.DataSource">
+        jdbcDriver org.apache.derby.jdbc.ClientDriver
+        password app
+        userName app
+        jdbcUrl jdbc:derby://localhost:1527/consultDB
+        JtaManaged true  
+    </Resource>
+    
+    <Resource id="jdbc-myconsultingUnmanaged" type="javax.sql.DataSource">
+        jdbcDriver org.apache.derby.jdbc.ClientDriver
+        password app
+        userName app
+        jdbcUrl jdbc:derby://localhost:1527/consultDB
+        JtaManaged false 
+      </Resource>
