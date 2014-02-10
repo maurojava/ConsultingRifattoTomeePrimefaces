@@ -3,16 +3,10 @@
   <persistence-unit name="ConsultingRifattoTomeePrimefacesPU" transaction-type="JTA">
     <jta-data-source>jdbc/myconsultingManaged</jta-data-source>
     <non-jta-data-source>jdbc/myconsultingUnmanaged</non-jta-data-source>
-    <class>entity.Address</class>
-    <class>entity.Billable</class>
-    <class>entity.Client</class>
-    <class>entity.Consultant</class>
-    <class>entity.ConsultantStatus</class>
-    <class>entity.Project</class>
-    <class>entity.Recruiter</class>
-    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+   
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
-     <property name="org.apache.openjpa.jdbc.sql.DBDictionary" value="org.apache.openjpa.jdbc.sql.MySQLDictionary"/>    
+     
     </properties>
   </persistence-unit>
 </persistence>
